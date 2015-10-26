@@ -10,6 +10,13 @@ build the demo, just run
 `matWrapper.hpp` defines a template `MatWrapper`, which serves as a light 
 alternative of OpenCV `Mat`. The usage is demonstrated in the demos.
 
+## Reference
+
+    Van Herk M. A fast algorithm for local minimum and maximum filters on
+    rectangular and octagonal kernels[J]. Pattern Recognition Letters, 1992,
+    13(7): 517-521.
+
+
 ## Demo
 
 * `compareEfficiencyWithOpenCV`
@@ -32,75 +39,76 @@ process 16Bit images of the same size
 1. Pixel depth has little effect on HGW implementation
 
 
-    =========================================================
-    Image(CV_8U) size: [5472 x 3648]
-    Kernel size:       [3 x 3]
-    elapsed time of OpenCV erode: 0.021483 secs
-    elapsed time of HGW erode:    0.699951 secs
-    Result error  estimation: 0
-    =========================================================
-    Image(CV_8U) size: [5472 x 3648]
-    Kernel size:       [19 x 19]
-    elapsed time of OpenCV erode: 0.02735 secs
-    elapsed time of HGW erode:    0.576092 secs
-    Result error  estimation: 0
-    =========================================================
-    Image(CV_8U) size: [5472 x 3648]
-    Kernel size:       [3 x 3]
-    elapsed time of OpenCV dilate: 0.008891 secs
-    elapsed time of HGW dilate:    0.610029 secs
-    Result error  estimation: 0
-    =========================================================
-    Image(CV_8U) size: [5472 x 3648]
-    Kernel size:       [19 x 19]
-    elapsed time of OpenCV dilate: 0.022744 secs
-    elapsed time of HGW dilate:    0.578881 secs
-    Result error  estimation: 0
-    =========================================================
-    Image(CV_16U) size: [5472 x 3648]
-    Kernel size:        [3 x 3]
-    elapsed time of OpenCV erode: 0.049 secs
-    elapsed time of HGW erode:    0.437014 secs
-    Result error  estimation: 0
-    =========================================================
-    Image(CV_8U) size: [5472 x 3648]
-    Kernel size:       [19 x 19]
-    elapsed time of OpenCV erode: 0.02735 secs
-    elapsed time of HGW erode:    0.576092 secs
-    Result error  estimation: 0
-    =========================================================
-    Image(CV_8U) size: [5472 x 3648]
-    Kernel size:       [3 x 3]
-    elapsed time of OpenCV dilate: 0.008891 secs
-    elapsed time of HGW dilate:    0.610029 secs
-    Result error  estimation: 0
-    =========================================================
-    Image(CV_8U) size: [5472 x 3648]
-    Kernel size:       [19 x 19]
-    elapsed time of OpenCV dilate: 0.022744 secs
-    elapsed time of HGW dilate:    0.578881 secs
-    Result error  estimation: 0
-    =========================================================
-    Image(CV_16U) size: [5472 x 3648]
-    Kernel size:        [3 x 3]
-    elapsed time of OpenCV erode: 0.049 secs
-    elapsed time of HGW erode:    0.437014 secs
-    Result error  estimation: 0
-    =========================================================
-    Image(CV_16U) size: [5472 x 3648]
-    Kernel size:        [19 x 19]
-    elapsed time of OpenCV erode: 0.058585 secs
-    elapsed time of HGW erode:    0.367326 secs
-    Result error  estimation: 0
-    =========================================================
-    Image(CV_16U) size: [5472 x 3648]
-    Kernel size:        [3 x 3]
-    elapsed time of OpenCV dilate: 0.017879 secs
-    elapsed time of HGW dilate:    0.313497 secs
-    Result error  estimation: 0
-    =========================================================
-    Image(CV_16U) size: [5472 x 3648]
-    Kernel size:        [19 x 19]
-    elapsed time of OpenCV dilate: 0.101644 secs
-    elapsed time of HGW dilate:    0.453101 secs
-    Result error  estimation: 0
+
+        =========================================================
+        Image(CV_8U) size: [5472 x 3648]
+        Kernel size:       [3 x 3]
+        elapsed time of OpenCV erode: 0.021483 secs
+        elapsed time of HGW erode:    0.699951 secs
+        Result error  estimation: 0
+        =========================================================
+        Image(CV_8U) size: [5472 x 3648]
+        Kernel size:       [19 x 19]
+        elapsed time of OpenCV erode: 0.02735 secs
+        elapsed time of HGW erode:    0.576092 secs
+        Result error  estimation: 0
+        =========================================================
+        Image(CV_8U) size: [5472 x 3648]
+        Kernel size:       [3 x 3]
+        elapsed time of OpenCV dilate: 0.008891 secs
+        elapsed time of HGW dilate:    0.610029 secs
+        Result error  estimation: 0
+        =========================================================
+        Image(CV_8U) size: [5472 x 3648]
+        Kernel size:       [19 x 19]
+        elapsed time of OpenCV dilate: 0.022744 secs
+        elapsed time of HGW dilate:    0.578881 secs
+        Result error  estimation: 0
+        =========================================================
+        Image(CV_16U) size: [5472 x 3648]
+        Kernel size:        [3 x 3]
+        elapsed time of OpenCV erode: 0.049 secs
+        elapsed time of HGW erode:    0.437014 secs
+        Result error  estimation: 0
+        =========================================================
+        Image(CV_8U) size: [5472 x 3648]
+        Kernel size:       [19 x 19]
+        elapsed time of OpenCV erode: 0.02735 secs
+        elapsed time of HGW erode:    0.576092 secs
+        Result error  estimation: 0
+        =========================================================
+        Image(CV_8U) size: [5472 x 3648]
+        Kernel size:       [3 x 3]
+        elapsed time of OpenCV dilate: 0.008891 secs
+        elapsed time of HGW dilate:    0.610029 secs
+        Result error  estimation: 0
+        =========================================================
+        Image(CV_8U) size: [5472 x 3648]
+        Kernel size:       [19 x 19]
+        elapsed time of OpenCV dilate: 0.022744 secs
+        elapsed time of HGW dilate:    0.578881 secs
+        Result error  estimation: 0
+        =========================================================
+        Image(CV_16U) size: [5472 x 3648]
+        Kernel size:        [3 x 3]
+        elapsed time of OpenCV erode: 0.049 secs
+        elapsed time of HGW erode:    0.437014 secs
+        Result error  estimation: 0
+        =========================================================
+        Image(CV_16U) size: [5472 x 3648]
+        Kernel size:        [19 x 19]
+        elapsed time of OpenCV erode: 0.058585 secs
+        elapsed time of HGW erode:    0.367326 secs
+        Result error  estimation: 0
+        =========================================================
+        Image(CV_16U) size: [5472 x 3648]
+        Kernel size:        [3 x 3]
+        elapsed time of OpenCV dilate: 0.017879 secs
+        elapsed time of HGW dilate:    0.313497 secs
+        Result error  estimation: 0
+        =========================================================
+        Image(CV_16U) size: [5472 x 3648]
+        Kernel size:        [19 x 19]
+        elapsed time of OpenCV dilate: 0.101644 secs
+        elapsed time of HGW dilate:    0.453101 secs
+        Result error  estimation: 0
